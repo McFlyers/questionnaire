@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		
+		var pronoms_personnels=["je","tu","elle/il","nous","vous","ils/elles"];
+		var terminaisons_1er=["e","es","e","ons","ez","ent"];
+		var terminaisons_2eme=["is","is","it","issons","isseez","issent"];
+		var i=0;
+		var x_verbe=[v1,v2,v3,v4,v5];
+
+
+	
+		var verbe=prompt("choissisez le verbe à conjuguer du 1er ou du 2eme groupe!");
+		var debut_verbe= verbe.substring(0,verbe.length -2);
+		var fin_verbe=verbe.substring(verbe.length -2,verbe.length);
+
+
+		if (fin_verbe==="er") 
+		{
+			for (var i = 0 ; i < pronoms_personnels.length; i++)
+			{
+				document.write(pronoms_personnels[i] + "  " + debut_verbe  + terminaisons_1er[i] +"<br/>");
+			}
+
+		}
+		else
+		{
+			for (var i = 0 ; i < pronoms_personnels.length; i++)
+			{
+				document.write(pronoms_personnels[i] + "  " + debut_verbe + terminaisons_2eme[i] +"<br/>");
+			}
+
+		}
+	
+
+		
+		
+			
+
+		 
+
+
+	</script>
+
+</body>
+</html>
