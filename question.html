@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div class="container-fluid">
+<div class="container" id="full">
 
 	<div class="row justify-content-md-center">
 		<div class="col-sm  text-center font-weight-bold">
@@ -31,8 +31,8 @@
 		
 	<div class="row">
 		<ul>
-		<li><input type="checkbox">Partie utilisateur</input></li>
-		<li><input type="checkbox">Partie serveur</input></li>
+		<li><input type="checkbox" id="first" onclick="document.getElementById('second').checked = false">Partie utilisateur</input></li>
+		<li><input type="checkbox" id="second" onclick="document.getElementById('first').checked = false">Partie serveur</input></li>
 		</ul>
 	</div>
 
@@ -48,8 +48,8 @@
 
 	<div class="row">
 		<ul>
-		<li><input type="checkbox"> Oui</input></li>
-		<li><input type="checkbox"> Non</input></li>
+		<li><input type="checkbox" id="third" onclick="document.getElementById('forth').checked = false"> Oui</input></li>
+		<li><input type="checkbox" id="forth" onclick="document.getElementById('third').checked = false"> Non</input></li>
 		</ul>
 	</div>
 
@@ -63,8 +63,8 @@
 	</div>
 	<div class="row">
 		<ul>
-		<li><input type="checkbox"> Une fonction globale</input></li>
-		<li><input type="checkbox"> Une boite à outils d'un langage</input></li>
+		<li><input type="checkbox" id="fifth" onclick="document.getElementById('sixth').checked = false"> Une fonction globale</input></li>
+		<li><input type="checkbox" id="sixth" onclick="document.getElementById('fifth').checked = false"> Une boite à outils d'un langage</input></li>
 	</ul>
  	</div>
 
@@ -79,8 +79,8 @@
 
 	<div class="row">
 		<ul>
-		<li><input type="checkbox"> Un système de gestion de fichier</input></li>
-		<li><input type="checkbox"> Un système de gestion de version</input></li>
+		<li><input type="checkbox" id="seventh" onclick="document.getElementById('eighth').checked = false"> Un système de gestion de fichier</input></li>
+		<li><input type="checkbox" id="eighth" onclick="document.getElementById('seventh').checked = false"> Un système de gestion de version</input></li>
 		</ul>
 	</div>
 
@@ -95,8 +95,8 @@
 
 	<div class="row">
 		<ul>
-		<li><input type="checkbox"> < meta charset="utf-8" ></input></li>
-		<li><input type="checkbox"> < meta encoding="text/html; charset=utf-8" ></input></li>
+		<li><input type="checkbox" id="nineth" onclick="document.getElementById('tenth').checked = false"> < meta charset="utf-8" ></input></li>
+		<li><input type="checkbox" id="tenth" onclick="document.getElementById('nineth').checked = false"> < meta encoding="text/html; charset=utf-8" ></input></li>
 		</ul>
 	</div>
 
@@ -111,8 +111,8 @@
 
 	<div class="row">
 		<ul>
-		<li><input type="checkbox"> Adaptation à n'importe quelle résolution d'écran</input></li>
-		<li><input type="checkbox"> Quelque chose de responsable</input></li>
+		<li><input type="checkbox" id="eleventh" onclick="document.getElementById('twelveth').checked = false"> Adaptation à n'importe quelle résolution d'écran</input></li>
+		<li><input type="checkbox" id="twelveth" onclick="document.getElementById('eleventh').checked = false"> Quelque chose de responsable</input></li>
 	</div>
 
 <!-- 7 -->		
@@ -126,9 +126,9 @@
 
 	<div class="row">
 		<ul>
-		<li><input type="checkbox"> Une section</input></li>
-		<li><input type="checkbox"> Créer un bloc</input></li>
-		</ul>
+		<li><input type="checkbox" id="thirteenth" onclick="document.getElementById('forteenth').checked = false"> Une section</input></li>
+		<li><input type="checkbox" id="forteenth" onclick="document.getElementById('thirteenth').checked = false"> Créer un bloc</input></li>
+		</ul> 
 	</div>
 
 <!-- 8 -->
@@ -143,8 +143,8 @@
 
 		<div class="row">
 			<ul>
-			<li><input type="checkbox"> Une variable est propre à son langage et une constante à un autre</input></li>
-			<li><input type="checkbox"> Une variable varie dans un programme, une constante ne varie pas</input></li>
+			<li><input type="checkbox" id="fifteenth" onclick="document.getElementById('sixteenth').checked = false"> Une variable est propre à son langage et une constante à un autre</input></li>
+			<li><input type="checkbox" id="sixteenth" onclick="document.getElementById('fifteenth').checked = false"> Une variable varie dans un programme, une constante ne varie pas</input></li>
 			</ul>
 		</div>
 
@@ -161,8 +161,8 @@
 
 	<div class="row">
 		<ul>
-		<li><input type="checkbox"> PHP</input></li>
-		<li><input type="checkbox"> JavaScript</input></li>
+		<li><input type="checkbox" id="seventeenth" onclick="document.getElementById('eighteenth').checked = false"> PHP</input></li>
+		<li><input type="checkbox" id="eighteenth" onclick="document.getElementById('seventeenth').checked = false"> JavaScript</input></li>
 		</ul>
 	</div>
 
@@ -178,17 +178,24 @@
 
 	<div class="row">
 			<ul>
-			<li><input type="checkbox"> Une boucle permettant d'exécuter une instruction tant qu'une condition est fausse</input></li>
-			<li><input type="checkbox"> Une boucle permettant d'initialiser une variable</input></li>
+			<li><input type="checkbox" id="nineteenth" onclick="document.getElementById('twentyth').checked = false"> Une boucle permettant d'exécuter une instruction tant qu'une condition est fausse</input></li>
+			<li><input type="checkbox" id="twentyth" onclick="document.getElementById('nineteenth').checked = false"> Une boucle permettant d'initialiser une variable</input></li>
 			</ul>
 	</div>
 
 
+	<div class="row">
+		<div class="col text-center">
+			<button class="btn btn-danger justify-content-center" onclick="verifyQuiz()">Valider</button>
+		</div>
+	</div>
+
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>-->
+  	<script src='./index.js'></script>
+
 </body>
 </html>
